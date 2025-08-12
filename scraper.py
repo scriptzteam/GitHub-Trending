@@ -1,11 +1,11 @@
 # coding:utf-8
 
-import datetime
 import codecs
 import requests
 import os
 import time
 from pyquery import PyQuery as pq
+from datetime import datetime
 
 
 def git_add_commit_push(date, filename):
@@ -55,11 +55,18 @@ def scrape(language, filename):
 
 
 def job():
+    # Get current year and month
     now = datetime.now()
     path = f"trending/{now.year}/{now.month:02}"
+
+    # Create the directory
     os.makedirs(path, exist_ok=True)
-    strdate = datetime.datetime.now().strftime('%Y-%m-%d')
-    filename = '{path}/{date}.md'.format(date=strdate)
+    
+    # Get current date
+    strdate = now.strftime('%Y-%m-%d')
+
+    # Define filename using f-string
+    filename = f'{path}/{strdate}.md'
 
     # create markdown file
     createMarkdown(strdate, filename)
