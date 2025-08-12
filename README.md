@@ -1,6 +1,7 @@
 #  See What the GitHub Community Is Most Excited About
 
-Welcome to your go-to source for discovering trending GitHub repositories. Let’s explore what developers around the world are buzzing about! 
+Welcome to your go-to source for discovering trending GitHub repositories. 
+Let’s explore what developers around the world are buzzing about! 
 
 ---
 
