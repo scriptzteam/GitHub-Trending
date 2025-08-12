@@ -23,7 +23,7 @@ jobs:
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add -f Readme.md
+          git add -A
           git status
           if git status --porcelain | grep -q '^?? \|^A  \|^M  '; then
             echo "Changes detected, committing..."
