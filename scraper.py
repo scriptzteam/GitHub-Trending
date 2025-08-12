@@ -55,8 +55,11 @@ def scrape(language, filename):
 
 
 def job():
+    now = datetime.now()
+    path = f"trending/{now.year}/{now.month:02}"
+    os.makedirs(path, exist_ok=True)
     strdate = datetime.datetime.now().strftime('%Y-%m-%d')
-    filename = '{date}.md'.format(date=strdate)
+    filename = '{path}/{date}.md'.format(date=strdate)
 
     # create markdown file
     createMarkdown(strdate, filename)
